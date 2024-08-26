@@ -6,4 +6,4 @@ Customer have to enter their name, email, and credit card number for the persona
 
 Customer have to enter the amount of items he/she bought.
 
-It shows the total purchasing and donation amount. 
+It will show the total purchasing and donation amount. 
