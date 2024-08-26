@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="garageSale.js"></script>
+
+
+</head>
+
+<body>
+    
+    <div id="garageSaleInfo" style="display: block;">
+
+    <header>
+        <h1>Conestoga Garage Sale</h1>
+        <h2>Raising money for the Frontline Fund</h2>
+    </header>
+
+    <form class="formInformation" name="garageForm" method="post" onsubmit="return checkoutSubmit();">
+
+            <div class="field">
+                <label class="lblField" for="fullName">Name: </label>
+                <input class="inpField" type="text" name="fullName" id="fullName" placeholder="First Last">
+            </div>
+
+            <br> 
+
+            <div class="field">
+                <label class="lblField" for="Email">Email: </label>
+                <input class="inpField" type="text" name="Email" id="Email" placeholder="email@domain.com">
+            </div>
+
+            <br> 
+
+            <div class="field">
+                <label class="lblField" for="creditCardNumber">Credit Card Number: </label>
+                <input class="inpField" type="text" name="cCNumber" id="cCNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
+            </div>
+
+            <br> 
+
+            <div class="field">
+                <label class="lblField" for="creditCardExpiryMonth">Credit Card Expiry Month: </label>
+                <input class="inpField" type="text" name="cCExpiryMonth" id="cCExpiryMonth"" placeholder="MMM">
+            </div>
+
+            <br> 
+
+            <div class="field">
+                <label class="lblField" for="creditCardExpiryYear">Credit Card Expiry Year: </label>
+                <input class="inpField" type="text" name="cCExpiryYear" id="cCExpiryYear" placeholder="yyyy">
+            </div>
+
+            <br> 
+
+            <h2 class="hdItems">Buy generously</h2>
+
+            <div class="field">
+                <label class="lblItems" for="waterBottlesQuantity">Number of Water Bottles ($5)</label>
+                <input class="inpItems" type="text" name="waterBottlesQuantity" id="purQuantity" placeholder="0">
+            </div>
+
+            <br> 
+
+            <div class="field">
+                <label class="lblItems" for="capsQuantity">Number of Caps ($20)</label>
+                <input class="inpItems" type="text" name="capsQuantity" id="purQuantity" placeholder="0">
+            </div>
+
+            <br> 
+
+            <div class="field">
+                <label class="lblItems" for="pensQuantity">Number of Pens ($2)</label>
+                <input class="inpItems" type="text" name="pensQuantity" id="purQuantity" placeholder="0">
+            </div>
+
+            <br> 
+
+            <div class="field">
+                <label class="lblItems" for="candyBagsQuantity">Number of Candy Bags ($10)</label>
+                <input class="inpItems" type="text" name="candyBagsQuantity" id="purQuantity" placeholder="0">
+            </div>
+
+            <br> 
+
+            <div class="field">
+                <label class="lblItems" for="cupCakesQuantity">Number of Cup Cakes ($3)</label>
+                <input class="inpItems" type="text" name="cupCakesQuantity" id="purQuantity" placeholder="0">
+            </div>
+
+            <br> 
+
+            <div class="field1">
+                <input type="submit" value="Checkout" id="checkout">
+            </div>
+            
+    </form>
+
+    <div id="errorMessages">
+        <p id="errorStrings"></p>
+    </div>
+
+    <div id="receipt"></div>
+
+</div>
+
+
+<div id="receiptTable" style="display: none;">
+
+    <header>
+        <h1>Conestoga Garage Sale</h1>
+        <h2>Raising money for the Frontline Fund</h2>
+    </header>
+
+    <div class="tableInfoReceipt">
+
+    <table class="receiptInfoTable">
+
+        <h3>Thank you for your purchase!</h3>
+
+        <tbody>
+
+            <tr>
+                <td><strong>Full Name: </strong></td>
+                <td><p id="customerName"></p></td>
+            </tr>
+
+            <tr>
+                <td><strong>Email: </strong></td>
+                <td><p id="customerEmail"></p></td>
+            </tr>
+
+            <tr>
+                <td><strong>Credit Card Number: </strong></td>
+                <td><p id="customerCCNumber"></p></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <br>
+
+    <table class="receiptInfoSecondTable">
+
+        <thead>
+            <tr>
+                <th><strong>Item</strong></th>
+                <th><strong>Quantity</strong></th>
+                <th><strong>Unit Price</strong></th>
+                <th><strong>Total Price</strong></th>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td><p id="itemName1"></p></td>
+                    <td><p id="quantity1"></p></td>
+                    <td><p id="unitPrice1"></p></td>
+                    <td><p id="totalPrice1"></p></td>
+                </tr>
+
+                <tr>
+                    <td><p id="itemName2"></p></td>
+                    <td><p id="quantity2"></p></td>
+                    <td><p id="unitPrice2"></p></td>
+                    <td><p id="totalPrice2"></p></td>
+                </tr>
+
+                <tr>
+                    <td><p id="itemName3"></p></td>
+                    <td><p id="quantity3"></p></td>
+                    <td><p id="unitPrice3"></p></td>
+                    <td><p id="totalPrice3"></p></td>
+                </tr>
+
+                <tr>
+                    <td><p id="itemName4"></p></td>
+                    <td><p id="quantity4"></p></td>
+                    <td><p id="unitPrice4"></p></td>
+                    <td><p id="totalPrice4"></p></td>
+                </tr>
+
+                <tr>
+                    <td><p id="itemName5"></p></td>
+                    <td><p id="quantity5"></p></td>
+                    <td><p id="unitPrice5"></p></td>
+                    <td><p id="totalPrice5"></p></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Donation</strong></td>
+                    <td colspan="2"><strong>Minimum</strong></td>
+                    <td><p id="minDonation"></p></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><strong>Total Price</strong></td>
+                    <td><p id="grandTotalPrice"></p></td>
+                </tr>
+
+            </tbody>
+
+        </thead>
+
+    </table>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
